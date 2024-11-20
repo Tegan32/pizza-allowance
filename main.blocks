@@ -1,0 +1,102 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="k5Ce65%ui8O;~9O%eB^_">Player</variable><variable type="KIND_SpriteKind" id="g_h1rCYukM18F6Z@8q+e">Projectile</variable><variable type="KIND_SpriteKind" id="3=2mW5KzXdHCY!Elm_32">Food</variable><variable type="KIND_SpriteKind" id="f6meV:bgvqk`xN.b2@vT">Enemy</variable><variable id="2yv@AljJNC[amzhv_Z5E">MoneyInWallet</variable><variable id="uYjVRQAmjHvy8*^aEWh|">totalCost</variable><variable id="_T9?]2G161]HKQ5kV`uI">myPizza</variable><variable id="vM319L,.Yuh5r#Rk]E|D">noPizza</variable><variable id="Xf6_p7r0+TO`iIlJ;KF{">mySprite</variable></variables><block type="pxt-on-start" id="nSM|Uk(`~}.I_tO,9CJe" x="0" y="0"><statement name="HANDLER"><block type="gamesetbackgroundcolor" id="@NAM}U7Wt.jUWv-T1o?]"><value name="color"><shadow type="colorindexpicker" id="GBUH|pdSM`qP{6u4+1-`"><field name="index">3</field></shadow></value><next><block type="variables_set" id="%Qa(f[u`Vhc;~dI$sCo$"><field name="VAR" id="2yv@AljJNC[amzhv_Z5E">MoneyInWallet</field><value name="VALUE"><shadow type="math_number"><field name="NUM">254</field></shadow><block type="gameaskfornumber" id="zIwqO!D@87zf~6/Oqehz"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="1" _input_init="true"></mutation><value name="message"><shadow type="text" id="NkE@!+L;LQbGx;74Nya3"><field name="TEXT">How many US dollars do you have?</field></shadow></value><value name="answerLength"><shadow type="math_number_minmax" id="_b$gsj;BNYD`|4R[^6KS"><mutation min="1" max="10" label="AnswerLength" precision="0"></mutation><field name="SLIDER">4</field></shadow></value></block></value><next><block type="function_call" id="d8S]P+-r`?6,e.3{[@wo"><mutation name="eatPizza" functionid="7Sar@kP+8O@QJH+JIC|d"></mutation></block></next></block></next></block></statement></block><block type="function_definition" id="VkrmJTu:S|pEuT;S}DN+" x="570" y="190"><mutation name="checkWallet" functionid="mWls@oSnuw6l@,GM4Gug"></mutation><field name="function_name">checkWallet</field><statement name="STACK"><block type="controls_if" id="Q.*4uB`;m=rrRHStQg:_"><mutation else="1"></mutation><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="logic_compare" id="_,geR6+H?!99;n74hYQD"><field name="OP">GT</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="variables_get" id="/ud(mDW/3R^UUiBS6,Q5"><field name="VAR" id="2yv@AljJNC[amzhv_Z5E">MoneyInWallet</field></block></value><value name="B"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="function_call_output" id="6Ox6D?FB*NjJ*zSQfaB_"><mutation name="costPizza" functionid="%LrAd~;]6N(m3OFBCefQ"><arg name="perSliceCost" id="$^SYBWwb|Jlhr=Ldd@E/" type="number"></arg><arg name="numSlices" id="2(5!=^XchYIG[C{W(L,k" type="number"></arg></mutation><value name="$^SYBWwb|Jlhr=Ldd@E/"><shadow type="math_number" id="}O$JX2]/Nn(tb-]q]i[G"><field name="NUM">20</field></shadow></value><value name="2(5!=^XchYIG[C{W(L,k"><shadow type="math_number" id="@w,T_y:qr/vqNxtpMn}{"><field name="NUM">3</field></shadow></value></block></value></block></value><statement name="DO0"><block type="function_return" id="~kU+onpYv9bC(EKn-)t]"><mutation xmlns="http://www.w3.org/1999/xhtml" no_return_value="false"></mutation><value name="RETURN_VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="logic_boolean" id="b29X$%@vV~b5?7WoQ:Te"><field name="BOOL">TRUE</field></block></value></block></statement><statement name="ELSE"><block type="function_return" id="d*UrdU_`zGT9`IN1xZZB"><mutation xmlns="http://www.w3.org/1999/xhtml" no_return_value="false"></mutation><value name="RETURN_VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="logic_boolean" id="69t-URs{|W9HsQe]?g{d"><field name="BOOL">FALSE</field></block></value></block></statement></block></statement></block><block type="function_definition" id="?RGWmXq48%E{)5{PH~VD" x="-10" y="290"><mutation name="eatPizza" functionid="7Sar@kP+8O@QJH+JIC|d"></mutation><field name="function_name">eatPizza</field><statement name="STACK"><block type="controls_if" id="FL~:o;+O(C0@ie#}0)h5"><mutation else="1"></mutation><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="function_call_output" id="9REuR{_7:`qpg9)F/#bx"><mutation name="checkWallet" functionid="mWls@oSnuw6l@,GM4Gug"></mutation></block></value><statement name="DO0"><block type="variables_set" id="K39$|#;/DOj1Gm7fiLY#"><field name="VAR" id="_T9?]2G161]HKQ5kV`uI">myPizza</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="1Og,+8Bpk]S7taw-l}lz"><value name="img"><shadow type="screen_image_picker" id="T~%Ez:k[vlZYA%xOa4[k"><field name="img">img`
+.............beebbbb............
+............eebbbb4bb...........
+............eb344bb4bb..........
+............e44334bb4bb.........
+............eb433344b4be........
+............4eb43344444be.......
+...........bd4eb43333344bb......
+..........b455d4443333444bb.....
+..........4d5555d444333444bb....
+.........4555555dd4b4443444be...
+........bd5555d555d4bb444444ee..
+........b55ddd665555bb4b44444ee.
+.......bd5555677655554ebb44444eb
+.......43222558855555d4eeb44b4ee
+......b422332ddd555222d4eebbb4be
+......be22232ed55522332db4ebbbbe
+.....bde22222e555e22232edd4bbbbe
+.....b52e222e3555e22222eddd4ebee
+....bd552eee355552e222e355544eee
+....665dd5555555552eee355dd4deee
+...6776555555555555555551554d4ee
+...4885222555dddd6655551544d4eee
+..b45522332555dd677611d444ddeee.
+..4d5222232e55555881d44ddd4eee..
+.bdd5e22222e555115114d54d4ee....
+.b55d2e222e351144d1d55eeee......
+bd5ddd2eee3d444555dd4e..........
+b555115dddd55d544eede...........
+4511d444d5544ee...4de...........
+41d4555d4ee........44...........
+41554eede.......................
+44ee...4e.......................
+`</field><data>{"commentRefs":[],"fieldData":{"img":"T~%Ez:k[vlZYA%xOa4[k"}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="TnsJg[/2MI,G~@4mMbqK"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="spritesay" id="wMR0r}9gQPQz5ouPD/+!"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="sprite"><block type="variables_get" id="T92Gl1EZR;CzTP;*^si%"><field name="VAR" id="_T9?]2G161]HKQ5kV`uI">myPizza</field></block></value><value name="text"><shadow type="text" id="KuDU;*L{y7hX4UFS,D(t"><field name="TEXT">PIZZA!!!!</field></shadow></value></block></next></block></statement><statement name="ELSE"><block type="variables_set" id="FpkKO:`H|~#RzqN|!nc`"><field name="VAR" id="vM319L,.Yuh5r#Rk]E|D">noPizza</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="yYae2}9dc6:FXQjJ?YS|"><value name="img"><shadow type="screen_image_picker" id="r)v@f;fK[As{ruzX|ahu"><field name="img">img`
+. . 5 5 5 5 5 5 5 5 5 5 5 . . . 
+. 5 5 5 5 5 5 5 5 5 5 5 5 5 . . 
+5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
+5 5 5 5 e e 5 5 5 e e 5 5 5 5 5 
+5 5 5 5 e e 5 5 5 e e 5 5 5 5 5 
+5 5 5 5 5 8 5 5 5 8 5 5 5 5 5 5 
+5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
+5 5 5 5 8 5 5 5 5 5 8 5 5 5 5 5 
+5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
+5 5 8 5 5 5 2 2 2 5 5 5 8 5 5 5 
+5 5 5 5 2 2 2 5 2 2 2 5 5 5 5 5 
+5 5 5 2 2 5 5 5 5 5 2 2 5 5 5 . 
+. 5 5 2 5 5 5 5 5 5 5 2 5 5 . . 
+. . 5 5 5 5 5 5 5 5 5 5 5 . . . 
+. . . 5 5 5 5 5 5 5 5 5 . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"r)v@f;fK[As{ruzX|ahu"}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="`G5tNtA14=phO=P]Z~AX"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="run_image_animation" id="`o8gZ8b;AJ(`{[H%+pnM"><value name="sprite"><block type="variables_get" id="Jkbo+|{yIHT[*{u|4Cfa"><field name="VAR" id="vM319L,.Yuh5r#Rk]E|D">noPizza</field></block></value><value name="frames"><block type="animation_editor" id="P9/c%c;2gZz$z_Le[#,N"><field name="frames">[img`
+. . 5 5 5 5 5 5 5 5 5 5 5 . . . 
+. 5 5 5 5 5 5 5 5 5 5 5 5 5 . . 
+5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
+5 5 5 5 e e 5 5 5 e e 5 5 5 5 5 
+5 5 5 5 e e 5 5 5 e e 5 5 5 5 5 
+5 5 5 5 5 8 5 5 5 8 5 5 5 5 5 5 
+5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
+5 5 5 5 8 5 5 5 5 5 8 5 5 5 5 5 
+5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
+5 5 8 5 5 5 2 2 2 5 5 5 8 5 5 5 
+5 5 5 5 2 2 2 5 2 2 2 5 5 5 5 5 
+5 5 5 2 2 5 5 5 5 5 2 2 5 5 5 . 
+. 5 5 2 5 5 5 5 5 5 5 2 5 5 . . 
+. . 5 5 5 5 5 5 5 5 5 5 5 . . . 
+. . . 5 5 5 5 5 5 5 5 5 . . . . 
+`,img`
+. . 5 5 5 5 5 5 5 5 5 5 5 . . . 
+. 5 5 5 5 5 5 5 5 5 5 5 5 5 . . 
+5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
+5 5 5 5 e e 5 5 5 e e 5 5 5 5 5 
+5 5 5 5 e e 5 5 5 e e 5 5 5 5 5 
+5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
+5 5 5 5 8 5 5 5 5 5 8 5 5 5 5 5 
+5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
+5 5 5 8 5 5 5 5 5 5 5 8 5 5 5 5 
+5 5 5 5 5 5 2 2 2 5 5 5 5 5 5 5 
+5 8 5 5 2 2 2 5 2 2 2 5 5 8 5 5 
+5 5 5 2 2 5 5 5 5 5 2 2 5 5 5 . 
+. 5 5 2 5 5 5 5 5 5 5 2 5 5 . . 
+. . 5 5 5 5 5 5 5 5 5 5 5 . . . 
+. . . 5 5 5 5 5 5 5 5 5 . . . . 
+`,img`
+. . 5 5 5 5 5 5 5 5 5 5 5 . . . 
+. 5 5 5 5 5 5 5 5 5 5 5 5 5 . . 
+5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
+5 5 5 5 e e 5 5 5 e e 5 5 5 5 5 
+5 5 5 5 e e 5 5 5 e e 5 5 5 5 5 
+5 5 5 5 5 8 5 5 5 8 5 5 5 5 5 5 
+5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
+5 5 5 8 5 5 5 5 5 5 5 8 5 5 5 5 
+5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
+5 5 8 5 5 5 2 2 2 5 5 5 8 5 5 5 
+5 5 5 5 2 2 2 5 2 2 2 5 5 5 5 5 
+8 5 5 2 2 5 5 5 5 5 2 2 5 5 8 . 
+. 5 5 2 5 5 5 5 5 5 5 2 5 5 . . 
+. . 5 5 5 5 5 5 5 5 5 5 5 . . . 
+. . . 5 5 5 5 5 5 5 5 5 . . . . 
+`]</field><data>{"commentRefs":[],"fieldData":{"frames":"P9/c%c;2gZz$z_Le[#,N"}}</data></block></value><value name="frameInterval"><shadow type="timePicker" id="uB8A1w0vAj2,o..Qu]91"><field name="ms">200</field></shadow></value><value name="loop"><shadow type="toggleOnOff" id="F(T.Dl~czUwd+TJYDZ2g"><field name="on">true</field></shadow></value><next><block type="spritesay" id="r:fX)IrbIlD4U2kniz:S"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="sprite"><block type="variables_get" id="wNK6/y|9Tg1(4uur|]0J"><field name="VAR" id="vM319L,.Yuh5r#Rk]E|D">noPizza</field></block></value><value name="text"><shadow type="text" id="tOR~NagHtLH9J}VAi3g?"><field name="TEXT">No Pizza...</field></shadow></value></block></next></block></next></block></statement></block></statement></block><block type="function_definition" id="e9a_Z*aujVs@n+y*8:mK" x="570" y="610"><mutation name="costPizza" functionid="%LrAd~;]6N(m3OFBCefQ"><arg name="perSliceCost" id="$^SYBWwb|Jlhr=Ldd@E/" type="number"></arg><arg name="numSlices" id="2(5!=^XchYIG[C{W(L,k" type="number"></arg></mutation><field name="function_name">costPizza</field><statement name="STACK"><block type="variables_set" id="nwSlt^Od]hb[~@9=}CB0"><field name="VAR" id="uYjVRQAmjHvy8*^aEWh|">totalCost</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="math_arithmetic" id="6-F9FdB#_-]#%22{d|!~"><field name="OP">MULTIPLY</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="argument_reporter_number" id="Kf.},/7k@wVs;gUUUzxU"><field name="VALUE">perSliceCost</field></block></value><value name="B"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="argument_reporter_number" id="LBx]Pd$7Cf|@gQ5qlNjy"><field name="VALUE">numSlices</field></block></value></block></value><next><block type="function_return" id="(3vqXhvE_s#KJ^j*-*co"><mutation xmlns="http://www.w3.org/1999/xhtml" no_return_value="false"></mutation><value name="RETURN_VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="variables_get" id="0q1_r6tKv62wra?*ojn+"><field name="VAR" id="uYjVRQAmjHvy8*^aEWh|">totalCost</field></block></value></block></next></block></statement></block></xml>
