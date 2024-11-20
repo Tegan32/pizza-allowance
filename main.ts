@@ -38,7 +38,13 @@ function eatPizza () {
             41554eede.......................
             44ee...4e.......................
             `, SpriteKind.Player)
-        myPizza.say("PIZZA!!!!")
+        game.showLongText("PIZZA!!!", DialogLayout.Bottom)
+        myPizza.setVelocity(100, 100)
+        scaling.scaleToPercent(myPizza, 200, ScaleDirection.Uniformly, ScaleAnchor.Middle)
+        myPizza.setBounceOnWall(true)
+        pause(3000)
+        game.gameOver(true)
+        game.setGameOverEffect(true, effects.confetti)
     } else {
         noPizza = sprites.create(img`
             . . 5 5 5 5 5 5 5 5 5 5 5 . . . 
@@ -116,13 +122,18 @@ function eatPizza () {
         true
         )
         noPizza.say("No Pizza...")
+        pause(2000)
+        game.showLongText("Go earn money and come back. Our quality pizza is $61/slice", DialogLayout.Bottom)
+        game.reset()
     }
 }
 function checkWallet () {
-    if (MoneyInWallet > costPizza(20, 3)) {
-        return true
-    } else {
-        return false
+    while (true) {
+        if (MoneyInWallet > costPizza(20, 3)) {
+            return true
+        } else {
+            return false
+        }
     }
 }
 let noPizza: Sprite = null
